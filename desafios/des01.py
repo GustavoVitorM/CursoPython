@@ -1,3 +1,5 @@
+# Exercício 1 - Usando Tipos
+
 nome = "Gustavo"
 sobrenome = "Sousa"
 idade = 18
