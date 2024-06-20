@@ -3,7 +3,7 @@
 cont = 0
 
 while True:
-    print("---- Calculadora ----")
+    print("---- Calculadora ----f")
     if cont == 0:
         n1 = input("-> Digite um número inteiro: ")
 
