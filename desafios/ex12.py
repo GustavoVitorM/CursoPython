@@ -1,17 +1,15 @@
 """
     Validando um cpf
 """
+import random
 
-cpf = input("Digite o CPF: ")
+cpf = ''
+for _ in range(9):
+    cpf += str(random.randint(0, 9))
 
-separação1 = cpf.split("-")
-separação2 = separação1[0].split(".")
-digitos = []
-
-for digito in separação2:
-    digitos.append(digito[0])
-    digitos.append(digito[1])
-    digitos.append(digito[2])
+digitos = cpf.replace(".", "")
+digitos = digitos.replace("-", "")
+digitos_finais = []
 
 resultado = 0
 for i in range(0, 9, 1):
@@ -22,10 +20,9 @@ resultado = (resultado * 10) % 11
 if resultado > 9:
     resultado = 0
 
-print("DIGITO1: ", resultado)
-digitos.append(resultado)
+digitos_finais.append(resultado)
 
-resultado = 0
+resultado = 0   
 for i in range(0, 10, 1):
     resultado += int(digitos[i]) * (11 - i)
 
@@ -34,4 +31,9 @@ resultado = (resultado * 10) % 11
 if resultado > 9:
     resultado = 0
 
-print("DIGITO 2: ", resultado)
+digitos_finais.append(resultado)
+
+if digitos_finais[0] == int(digitos[9]) and digitos_finais[1] == int(digitos[10]):
+    print("CPF Válido")
+else:
+    print("CPF Inválido")
