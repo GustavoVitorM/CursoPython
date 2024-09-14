@@ -3,7 +3,7 @@ import os
 compras = []
 
 while True:
-    os.system("clear")
+    os.system("cls")
     print(f"{' Bem vindo a sua lista de compras ':-^50}")
     print("O que deseja fazer?")
     print("< 1 > INSERIR ITEM --\n",
@@ -13,7 +13,7 @@ while True:
     
     opção = input("Digite uma opção: ")
     
-    os.system("clear")
+    os.system("cls")
     try:
         opção = int(opção)
     except:
@@ -31,9 +31,9 @@ while True:
             print("Esse item não consta na lista!")
     elif opção == 3:
         print(f"{' Lista de Itens ':-^20}")
-        for i in compras:
-            print(f'--> {i}')
-        print(f"{"-"*20}")
+        for i, v in enumerate(compras):
+            print(f'--> {i} - {v}')
+        print({"-"*20})
 
         continuar = input("")
     elif opção == 4:
