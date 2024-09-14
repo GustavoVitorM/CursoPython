@@ -1,6 +1,6 @@
 c =1323
 
-def escopo ():
+def escopo():
     c = 1
 
     print(c)
