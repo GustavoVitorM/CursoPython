@@ -1,4 +1,7 @@
 
+# Duplicando, Triplicando e Quadruplicando valores 
+# utilizando closure
+
 def equ(mult):
     def multi(value):
         return value * mult

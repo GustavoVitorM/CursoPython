@@ -1,4 +1,4 @@
-# --- Sistema de questions e answares ---
+# --- Sistema de perguntas e respostas ---
 
 questions = [
     {

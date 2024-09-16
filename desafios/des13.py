@@ -1,3 +1,4 @@
+# Multiplicando os valores de uma lista
 
 def add(*args):
     result = 1
